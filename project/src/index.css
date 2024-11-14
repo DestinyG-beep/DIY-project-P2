@@ -16,26 +16,49 @@ code {
 .App {
   font-family: 'Arial', sans-serif;
   text-align: left;
-  background-color: #f4f4f4;
+  background-color: white;
   padding: 20px;
 }
 
-.app-header {
+.navbar {
   background-color: #2c3e50;
   color: white;
-  padding: 20px;
+  padding: 5px;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
+/*.navbar {
+  padding: auto;
+  display: block;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: #435263;
+}*/
 
-.PCh2 {
-  position: top;
+.navbar .links {
+margin-right: auto;
+text-align: center;
+font-size: 25px;
+}
+
+.navbar a {
+  margin-right: 12px;
+  text-decoration: none;
+  padding: 6px;  
+  color: #868689;
+}
+
+.navbar a:hover {
+  color: #ee7f73;
 }
 
 #h1 {
-  font-size: 36px;
+  font-size: 46px;
   margin: 0;
+  align-items: center;
+  text-align: center;
 }
 
 .tagline {
@@ -66,6 +89,7 @@ code {
 }
 
 .project-card {
+  align : center;
   background-color: white;
   padding: 15px;
   border-radius: 10px;

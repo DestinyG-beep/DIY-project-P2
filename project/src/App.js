@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // Import React and useState
 import NavBar from './components/NavBar';
 import ProjectCard from './components/ProjectCard';
 
+
 function App() {
   const [searchQuery, setSearchQuery] = useState(''); // State for search query
 
@@ -21,6 +22,7 @@ function App() {
     <div className="App">
       {/* Header Section */}
       <header className='app-header'>
+      <h1 id="h1">Do It Yourself Projects</h1>
         <NavBar/>
       </header>
 
@@ -46,6 +48,7 @@ function App() {
       </section>
 
       {/* Featured Projects Section */}
+      <h2>Featured Projects </h2>
       <ProjectCard/>
 
       {/* Footer Section */}

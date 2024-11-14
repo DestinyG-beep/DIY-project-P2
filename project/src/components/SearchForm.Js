@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types'; // For type checking
 
 // SearchForm Component
-function SearchForm({ onSearch }) {
+const SearchForm = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Handle input change
