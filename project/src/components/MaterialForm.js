@@ -1,5 +1,171 @@
 const MaterialForm = () => {
-    return (  );
+    return ( f );
 }
  
 export default MaterialForm;
+
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "Wooden Chair",
+        "materials": ["wood", "nails", "paint", "hammer", "saw"],
+        "difficulty": "medium",
+        "description": "Build a simple wooden chair using basic woodworking tools.",
+        "image": "https://via.placeholder.com/200?text=Wooden+Chair"
+      },
+      {
+        "id": 2,
+        "title": "Painted Pottery",
+        "materials": ["clay", "paint", "brushes", "water"],
+        "difficulty": "easy",
+        "description": "Create a beautiful pottery piece and paint it with your favorite designs.",
+        "image": "https://via.placeholder.com/200?text=Painted+Pottery"
+      },
+      {
+        "id": 3,
+        "title": "Cardboard Organizer",
+        "materials": ["cardboard", "glue", "scissors", "marker"],
+        "difficulty": "easy",
+        "description": "Make a stylish cardboard organizer for your desk.",
+        "image": "https://via.placeholder.com/200?text=Cardboard+Organizer"
+      },
+      {
+        "id": 4,
+        "title": "Macramé Wall Hanging",
+        "materials": ["cotton rope", "wooden dowel", "scissors"],
+        "difficulty": "medium",
+        "description": "Create a beautiful macramé wall hanging using simple knots.",
+        "image": "https://via.placeholder.com/200?text=Macramé+Wall+Hanging"
+      },
+      {
+        "id": 5,
+        "title": "Painted Plant Pots",
+        "materials": ["ceramic pots", "paint", "brushes", "soil", "plants"],
+        "difficulty": "easy",
+        "description": "Customize plain ceramic pots with colorful designs and plant your favorite flowers.",
+        "image": "https://via.placeholder.com/200?text=Painted+Plant+Pots"
+      },
+      {
+        "id": 6,
+        "title": "DIY Birdhouse",
+        "materials": ["wood", "nails", "paint", "hammer", "saw", "drill"],
+        "difficulty": "medium",
+        "description": "Build a small wooden birdhouse for your garden.",
+        "image": "https://via.placeholder.com/200?text=DIY+Birdhouse"
+      },
+      {
+        "id": 7,
+        "title": "Upcycled T-Shirt Tote Bag",
+        "materials": ["old t-shirt", "scissors", "needle", "thread"],
+        "difficulty": "easy",
+        "description": "Transform an old t-shirt into a reusable tote bag.",
+        "image": "https://via.placeholder.com/200?text=Upcycled+T-shirt+Bag"
+      },
+      {
+        "id": 8,
+        "title": "Wall Art with Twigs",
+        "materials": ["twigs", "hot glue gun", "frame", "paint"],
+        "difficulty": "medium",
+        "description": "Create a beautiful piece of wall art using twigs and paint.",
+        "image": "https://via.placeholder.com/200?text=Wall+Art+with+Twigs"
+      },
+      {
+        "id": 9,
+        "title": "Concrete Planter",
+        "materials": ["concrete mix", "molds", "water", "plastic cups", "sandpaper"],
+        "difficulty": "hard",
+        "description": "Make a unique concrete planter for your plants using a mold.",
+        "image": "https://via.placeholder.com/200?text=Concrete+Planter"
+      },
+      {
+        "id": 10,
+        "title": "Upcycled Glass Jar Lanterns",
+        "materials": ["glass jars", "paint", "twine", "LED candles"],
+        "difficulty": "easy",
+        "description": "Repurpose glass jars to create beautiful lanterns for your home.",
+        "image": "https://via.placeholder.com/200?text=Glass+Jar+Lanterns"
+      },
+      {
+        "id": 11,
+        "title": "Homemade Soap",
+        "materials": ["glycerin soap base", "essential oils", "colorant", "molds"],
+        "difficulty": "medium",
+        "description": "Create your own fragrant soap bars with glycerin base and essential oils.",
+        "image": "https://via.placeholder.com/200?text=Homemade+Soap"
+      },
+      {
+        "id": 12,
+        "title": "Recycled Plastic Bottle Planters",
+        "materials": ["plastic bottles", "paint", "soil", "plants", "scissors"],
+        "difficulty": "easy",
+        "description": "Recycle old plastic bottles into planters for small plants or herbs.",
+        "image": "https://via.placeholder.com/200?text=Plastic+Bottle+Planter"
+      },
+      {
+        "id": 13,
+        "title": "Ladder Shelf",
+        "materials": ["wood", "nails", "paint", "saw", "drill"],
+        "difficulty": "medium",
+        "description": "Build a stylish ladder shelf to store books or decorative items.",
+        "image": "https://via.placeholder.com/200?text=Ladder+Shelf"
+      },
+      {
+        "id": 14,
+        "title": "Fabric Covered Storage Boxes",
+        "materials": ["cardboard boxes", "fabric", "hot glue gun", "scissors"],
+        "difficulty": "easy",
+        "description": "Transform simple cardboard boxes into decorative storage boxes with fabric.",
+        "image": "https://via.placeholder.com/200?text=Fabric+Storage+Boxes"
+      },
+      {
+        "id": 15,
+        "title": "Rustic Picture Frame",
+        "materials": ["wood", "hammer", "nails", "twine", "paint"],
+        "difficulty": "medium",
+        "description": "Create a rustic picture frame from reclaimed wood.",
+        "image": "https://via.placeholder.com/200?text=Rustic+Frame"
+      },
+      {
+        "id": 16,
+        "title": "Mini Terrarium",
+        "materials": ["glass jar", "rocks", "soil", "plants", "decorative figures"],
+        "difficulty": "easy",
+        "description": "Make a mini terrarium using a glass jar and small plants.",
+        "image": "https://via.placeholder.com/200?text=Mini+Terrarium"
+      },
+      {
+        "id": 17,
+        "title": "Painted Mason Jars",
+        "materials": ["mason jars", "paint", "brushes", "string lights"],
+        "difficulty": "easy",
+        "description": "Transform mason jars into beautiful decorative pieces for your home.",
+        "image": "https://via.placeholder.com/200?text=Mason+Jars"
+      },
+      {
+        "id": 18,
+        "title": "Candle Holders from Clay",
+        "materials": ["air-dry clay", "paint", "brushes", "tea light candles"],
+        "difficulty": "medium",
+        "description": "Create custom candle holders using air-dry clay.",
+        "image": "https://via.placeholder.com/200?text=Clay+Candle+Holder"
+      },
+      {
+        "id": 19,
+        "title": "Custom Tote Bag",
+        "materials": ["cotton fabric", "paint", "stencil", "brushes"],
+        "difficulty": "medium",
+        "description": "Create a custom-designed tote bag with fabric paint and stencils.",
+        "image": "https://via.placeholder.com/200?text=Custom+Tote+Bag"
+      },
+      {
+        "id": 20,
+        "title": "Wine Cork Bulletin Board",
+        "materials": ["wine corks", "frame", "glue", "scissors"],
+        "difficulty": "medium",
+        "description": "Repurpose wine corks to create a unique bulletin board.",
+        "image": "https://via.placeholder.com/200?text=Wine+Cork+Board"
+      }
+    ]
+  }
+  

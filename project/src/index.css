@@ -89,7 +89,7 @@ font-size: 25px;
 }
 
 .project-card {
-  align : center;
+  align-items : center;
   background-color: white;
   padding: 15px;
   border-radius: 10px;
