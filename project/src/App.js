@@ -48,7 +48,7 @@ function App() {
       </section>
 
       {/* Featured Projects Section */}
-      <h2>Featured Projects </h2>
+      <h2 id='F1'>Featured Projects </h2>
       <ProjectCard/>
 
       {/* Footer Section */}

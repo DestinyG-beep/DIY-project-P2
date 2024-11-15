@@ -54,6 +54,10 @@ font-size: 25px;
   color: #ee7f73;
 }
 
+.navbar a {
+  scroll-behavior: smooth;
+}
+
 #h1 {
   font-size: 46px;
   margin: 0;
