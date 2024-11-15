@@ -1,23 +1,29 @@
-import React from 'react'; 
+import React from "react";
 
-const ToDoList = ({ toDoList }) => {
+const ToDoList = ({ toDoProjects }) => {
+  // Make sure the prop is always an array
+  if (!Array.isArray(toDoProjects)) {
+    return <p>Loading your To-Do list...</p>; // Or some fallback message
+  }
+  
   return (
-    <section className="todo-list">
-      <h3>Your To-Do List</h3>
-      <ul>
-        {toDoList.length === 0 ? (
-          <p>No projects in your To-Do list.</p>
+  <section className="to-do-list-section">
+    <h2>Your To-Do Projects</h2>
+    <div className="project-cards">
+        {toDoProjects.length === 0 ? (
+            <p>No projects in your To-Do list yet.</p>
         ) : (
-          toDoList.map((project) => (
-            <li key={project.id}>
-              <h4>{project.title}</h4>
-              <p>{project.description}</p>
-            </li>
-          ))
+            toDoProjects.map(project => (
+                <div key={project.id} className="project-card">
+                    <img src={project.image} alt={project.title} />
+                    <h4>{project.title}</h4>
+                    <p>{project.description}</p>
+                </div>
+            ))
         )}
-      </ul>
-    </section>
-  );
-};
+    </div>
+  </section>
+    );
+}
 
 export default ToDoList;
