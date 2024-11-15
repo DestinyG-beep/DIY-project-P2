@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // Import React and useState
 import NavBar from './components/NavBar';
 import ProjectCard from './components/ProjectCard';
 import ToDoList from './components/ToDoList';
+import Favourites from './components/Favourites';
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
         <h2>To Do List</h2>
         <ToDoList/>
         
+        {/*favourites section*/}
+        <Favourites/>
 
         {/* Footer Section */}
         <footer className="app-footer">
