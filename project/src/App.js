@@ -1,22 +1,10 @@
 import React, { useState } from 'react'; // Import React and useState
 import NavBar from './components/NavBar';
 import ProjectCard from './components/ProjectCard';
+import SearchForm from './components/SearchForm.';
 
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState(''); // State for search query
-
-  // Handle input change in the search field
-  const handleSearchChange = (event) => {
-    setSearchQuery(event.target.value); // Update the search query state
-  };
-
-  // Handle form submission (optional: currently just logs the search query)
-  const handleSearchSubmit = (event) => {
-    event.preventDefault(); // Prevent page refresh
-    console.log("Search query:", searchQuery); // Log the search query for now
-    // You can later use the query to filter projects here
-  };
 
   return (
     <div className="App">
@@ -27,19 +15,7 @@ function App() {
       </header>
 
       {/* Search Form */}
-      <section className="search-section">
-        <h2>Search DIY Projects</h2>
-        <form onSubmit={handleSearchSubmit} className="search-form">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            placeholder="Enter materials (e.g., wood, paint)"
-            className="search-input"
-          />
-          <button type="submit" className="search-button">Search</button>
-        </form>
-      </section>
+      <SearchForm/>
 
       {/* Intro Section */}
       <section className="intro-section">
