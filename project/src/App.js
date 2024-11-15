@@ -11,24 +11,23 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* Header Section */}
         <header className="app-header">
           <h1 id="h1">Do It Yourself Projects</h1>
-          <NavBar /> {/* Navigation links */}
+          <NavBar /> 
         </header>
 
-        {/* Main Content: Routing */}
+        
         <main>
           <Routes>
-            <Route path="/" element={<Home />} /> {/* Home Page */}
-            <Route path="/projects" element={<FeaturedProjects />} /> {/* Featured Projects */}
-            <Route path="/todo" element={<ToDoList />} /> {/* To-Do List */}
-            <Route path="/favourites" element={<Favourites />} /> {/* Favourites */}
-            <Route path="*" element={<NotFound />} /> {/* Fallback for invalid routes */}
+            <Route path="/" element={<Home />} /> 
+            <Route path="/projects" element={<FeaturedProjects />} /> 
+            <Route path="/todo" element={<ToDoList />} /> 
+            <Route path="/favourites" element={<Favourites />} /> 
+            <Route path="*" element={<NotFound />} /> 
           </Routes>
         </main>
 
-        {/* Footer Section */}
+        
         <footer className="app-footer">
           <p>
             Warning !! The content and instructions on this app were compiled

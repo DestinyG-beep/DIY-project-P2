@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 function Favourites() {
   const [favouriteProjects, setFavouriteProjects] = useState([]);
 
-  // Fetch favourite projects from localStorage or initialize with an empty array
   useEffect(() => {
     const storedFavourites = JSON.parse(localStorage.getItem("favouriteProjects")) || [];
     setFavouriteProjects(storedFavourites);

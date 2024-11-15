@@ -1,30 +1,26 @@
 import React, { useState } from 'react';
 
-// SearchForm Component
 const SearchForm = ({ projects, onSearch }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Handle input change
   const handleInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    filterProjects(searchQuery); // Call the filter function on search query
+    filterProjects(searchQuery); 
   };
 
-  // Filter projects based on search query
   const filterProjects = (query) => {
     if (!query) {
-      onSearch(projects); // If no query, show all projects
+      onSearch(projects); 
     } else {
       const filtered = projects.filter(project =>
         project.title.toLowerCase().includes(query.toLowerCase()) ||
         project.description.toLowerCase().includes(query.toLowerCase())
       );
-      onSearch(filtered); // Pass the filtered data back to the parent component
+      onSearch(filtered); 
     }
   };
 
