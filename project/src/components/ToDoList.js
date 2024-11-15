@@ -3,20 +3,16 @@ import React, { useState, useEffect } from "react";
 const ToDoList = () => {
   const [toDoProjects, setToDoProjects] = useState([]); 
 
-  
   useEffect(() => {
     try {
-      
       const storedProjects = JSON.parse(localStorage.getItem("toDoProjects")) || [];
       setToDoProjects(storedProjects);
     } catch (error) {
-      
       console.error("Error parsing toDoProjects from localStorage", error);
       setToDoProjects([]); 
     }
   }, []);
 
-    // Check if toDoProjects is an array before rendering
   return (
     <div>
       <h2>Your To-Do List</h2>

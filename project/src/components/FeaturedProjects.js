@@ -38,6 +38,7 @@ function FeaturedProjects() {
 
     // Update the state and save to localStorage
     setProjects(updatedProjects);
+    setFilteredProjects(updatedProjects);  // Update filtered projects
     localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
   };
 
@@ -49,6 +50,7 @@ function FeaturedProjects() {
 
     // Update the state and save to localStorage
     setProjects(updatedProjects);
+    setFilteredProjects(updatedProjects);  // Update filtered projects
     localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
   };
 
@@ -56,6 +58,7 @@ function FeaturedProjects() {
   const handleDelete = (id) => {
     const updatedProjects = projects.filter(project => project.id !== id);
     setProjects(updatedProjects);
+    setFilteredProjects(updatedProjects);  // Update filtered projects
     localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
   };
 
