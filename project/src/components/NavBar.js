@@ -1,17 +1,17 @@
-const NavBar = () => {
-    
-  return ( 
-      <nav className="navbar">
-          <h2 >Welcome to Do It Yourself projects</h2>
-          <p className="tagline">Find creative DIY projects using the materials you have at home!</p>
-          <div className="links">
-          <a href="/" className="link">Home</a>
-          <a href="#C1"> Fav</a>
-          <a href="#T1">To-Do</a>
-          <a href="#F1">Projects</a>
-          </div>
-      </nav>
-    );
+import React from "react";
+import { Link } from "react-router-dom";
+
+function NavBar() {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/todo">To-Do List</Link></li>
+        <li><Link to="/favourites">Favourites</Link></li>
+      </ul>
+    </nav>
+  );
 }
 
 export default NavBar;
