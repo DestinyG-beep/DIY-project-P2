@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import ProjectCard from './components/ProjectCard';
 import ToDoList from './components/ToDoList';
 import Favourites from './components/Favourites';
-import SearchForm from './components/SearchForm'; 
+import SearchForm from './components/SearchForm';
 
 function App() {
   const [projects, setProjects] = useState([]);
@@ -89,10 +89,10 @@ function App() {
         </div>
 
         {/* To Do List Section */}
-        <ToDoList toDoProjects={toDoList} />
+        <ToDoList toDoProjects={toDoList} id="T1"/>
 
         {/* Favourites Section */}
-        <Favourites favouriteProjects={favouriteProjects} />
+        <Favourites favouriteProjects={favouriteProjects} id="C1"/>
 
         {/* Footer Section */}
         <footer className="app-footer">
