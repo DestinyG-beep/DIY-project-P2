@@ -5,8 +5,9 @@ import ToDoList from './components/ToDoList';
 import Favourites from './components/Favourites';
 
 function App() {
-  const [projects, setProjects] = useState([]);
-  const [favouriteProjects, setFavouriteProjects] = useState([]);
+  const [projects, setProjects] = useState([]); // Store all projects
+  const [favouriteProjects, setFavouriteProjects] = useState([]); // Store favourited projects
+  const [toDoProjects, setToDoProjects] = useState([]); // Store To-Do list projects
 
   // Fetch projects from db.json on component mount
   useEffect(() => {
@@ -29,10 +30,29 @@ function App() {
     );
   };
 
-  // Update the favouriteProjects list whenever projects change
+  // Handle toggling of to-do items
+  const handleToDoToggle = (id) => {
+    setProjects(prevProjects =>
+      prevProjects.map(project =>
+        project.id === id
+          ? { ...project, isToDo: !project.isToDo }
+          : project
+      )
+    );
+  };
+
+  // Handle deleting a project
+  const handleDelete = (id) => {
+    setProjects(prevProjects => prevProjects.filter(project => project.id !== id));
+  };
+
+  // Update the favouriteProjects and toDoProjects whenever projects change
   useEffect(() => {
     const favourites = projects.filter(project => project.isFav);
     setFavouriteProjects(favourites); // Store the favourited projects
+
+    const toDo = projects.filter(project => project.isToDo);
+    setToDoProjects(toDo); // Store the To-Do projects
   }, [projects]); // Only run when the projects state changes
 
   return (
@@ -57,21 +77,24 @@ function App() {
             <ProjectCard
               key={project.id}
               project={project}
-              onFavouriteToggle={handleFavouriteToggle}
+              onFavClick={handleFavouriteToggle}
+              onToDoClick={handleToDoToggle}
+              onDelete={handleDelete}  // Pass the delete function as a prop
             />
           ))}
         </div>
 
         {/* To Do List Section */}
-        <h2>To Do List</h2>
-        <ToDoList />
+        <h2>Your To-Do List</h2>
+        <ToDoList toDoProjects={toDoProjects} />
 
         {/* Favourites Section */}
+        <h2>Your Favourite Projects</h2>
         <Favourites favouriteProjects={favouriteProjects} />
 
         {/* Footer Section */}
         <footer className="app-footer">
-          <p>Warning !! The content and instructions on this app were compiled only to simulate practicality. Should an accident occur from following these instructions, the author will not be held accountable. Children should have parental or guardian supervision while doing any of the projects proposed.</p>
+          <p>Warning!! The content and instructions on this app were compiled only to simulate practicality. Should an accident occur from following these instructions, the author will not be held accountable. Children should have parental or guardian supervision while doing any of the projects proposed.</p>
         </footer>
       </div>
     </section>
