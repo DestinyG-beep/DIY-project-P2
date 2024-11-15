@@ -1,6 +1,7 @@
 import React from "react";
 
-function Favourites({ favouriteProjects }) {
+function Favourites({ favouriteProjects = [] }) {
+  // Ensure favouriteProjects is always an array, even if it's not passed in
   return (
     <div>
       <h2>Your Favourite Projects</h2>
