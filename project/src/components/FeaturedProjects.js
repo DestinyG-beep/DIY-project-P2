@@ -5,6 +5,8 @@ import SearchForm from "./SearchForm";
 function FeaturedProjects() {
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projectsPerPage] = useState(5);
 
   // Fetch projects from the server
   useEffect(() => {
@@ -24,6 +26,11 @@ function FeaturedProjects() {
     setFilteredProjects(filteredData);
   };
 
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
+
+
   const toggleFavourite = (id) => {
     setProjects(prevProjects =>
       prevProjects.map(project =>
@@ -42,7 +49,7 @@ function FeaturedProjects() {
   };
 
    // Handle project deletion
-   const handleDelete = (id) => {
+  const handleDelete = (id) => {
     setProjects(prevProjects => prevProjects.filter(project => project.id !== id));
     setFilteredProjects(prevProjects => prevProjects.filter(project => project.id !== id)); // Update filtered projects if deleted
   };
@@ -66,6 +73,22 @@ function FeaturedProjects() {
             />
           ))
         )}
+      </div>
+
+       {/* Pagination Controls */}
+       <div className="pagination">
+        <button
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => paginate(currentPage + 1)}
+          disabled={currentPage * projectsPerPage >= filteredProjects.length}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
