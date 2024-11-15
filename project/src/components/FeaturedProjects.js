@@ -24,6 +24,30 @@ function FeaturedProjects() {
     setFilteredProjects(filteredData);
   };
 
+  const toggleFavourite = (id) => {
+    setProjects(prevProjects =>
+      prevProjects.map(project =>
+        project.id === id ? { ...project, isFav: !project.isFav } : project
+      )
+    );
+  };
+
+  // Handle adding to To-Do list
+  const toggleToDo = (id) => {
+    setProjects(prevProjects =>
+      prevProjects.map(project =>
+        project.id === id ? { ...project, isToDo: !project.isToDo } : project
+      )
+    );
+  };
+
+   // Handle project deletion
+   const handleDelete = (id) => {
+    setProjects(prevProjects => prevProjects.filter(project => project.id !== id));
+    setFilteredProjects(prevProjects => prevProjects.filter(project => project.id !== id)); // Update filtered projects if deleted
+  };
+
+
   return (
     <div>
       <h2>Featured Projects</h2>
@@ -33,7 +57,13 @@ function FeaturedProjects() {
           <p>No projects match your search.</p>
         ) : (
           filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard 
+              key={project.id} 
+              project={project}
+              onFavouriteToggle={toggleFavourite}
+              onToDoClick={toggleToDo}
+              onDelete={handleDelete}
+            />
           ))
         )}
       </div>

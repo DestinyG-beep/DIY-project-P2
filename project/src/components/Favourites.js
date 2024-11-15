@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function Favourites({ favouriteProjects = [] }) {
-  // Ensure favouriteProjects is always an array, even if it's not passed in
+function Favourites() {
+  const [favouriteProjects, setFavouriteProjects] = useState([]); // Initialize as an empty array
+
+  // Fetch favourite projects from localStorage or initialize with an empty array
+  useEffect(() => {
+    const storedProjects = JSON.parse(localStorage.getItem("favouriteProjects")) || [];
+    setFavouriteProjects(storedProjects);
+  }, []);
+
+  
   return (
     <div>
       <h2>Your Favourite Projects</h2>
@@ -14,6 +22,7 @@ function Favourites({ favouriteProjects = [] }) {
               <img src={project.image} alt={project.title} />
               <h4>{project.title}</h4>
               <p>{project.description}</p>
+              
             </div>
           ))
         )}

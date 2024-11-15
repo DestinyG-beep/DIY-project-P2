@@ -21,7 +21,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} /> {/* Home Page */}
-            <Route path="/featured" element={<FeaturedProjects />} /> {/* Featured Projects */}
+            <Route path="/projects" element={<FeaturedProjects />} /> {/* Featured Projects */}
             <Route path="/todo" element={<ToDoList />} /> {/* To-Do List */}
             <Route path="/favourites" element={<Favourites />} /> {/* Favourites */}
             <Route path="*" element={<NotFound />} /> {/* Fallback for invalid routes */}

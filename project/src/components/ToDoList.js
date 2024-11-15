@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 
 const ToDoList = () => {
-  const [toDoProjects, setToDoProjects] = useState([]); // Initialize as an empty array
+  const [toDoProjects, setToDoProjects] = useState([]); 
 
-  // Fetch stored projects from localStorage
+  
   useEffect(() => {
     try {
-      // Attempt to parse the data stored in localStorage
+      
       const storedProjects = JSON.parse(localStorage.getItem("toDoProjects")) || [];
       setToDoProjects(storedProjects);
     } catch (error) {
-      // If there's an error parsing the data, log it and reset the state
+      
       console.error("Error parsing toDoProjects from localStorage", error);
-      setToDoProjects([]); // Fallback to an empty array
+      setToDoProjects([]); 
     }
   }, []);
 
-  // Check if toDoProjects is an array before rendering
+    // Check if toDoProjects is an array before rendering
   return (
     <div>
       <h2>Your To-Do List</h2>
@@ -25,7 +25,7 @@ const ToDoList = () => {
           toDoProjects.length === 0 ? (
             <div>
               <p>No to-do projects yet.</p>
-              <button onClick={() => window.location.href = "/add-project"}>
+              <button onClick={() => window.location.href = "/projects"}>
                 Add a Project
               </button>
             </div>
@@ -33,7 +33,7 @@ const ToDoList = () => {
             toDoProjects.map((project) => (
               <div key={project.id} className="project-card">
                 <h4>{project.title}</h4>
-                <p>{project.description}</p>
+                <p>{project.description}</p>                
               </div>
             ))
           )

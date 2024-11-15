@@ -16,7 +16,7 @@ const ProjectCard = ({ project, onFavouriteToggle, onToDoClick, onDelete }) => {
     }
   };
 
-  // Handle delete project
+  
   const handleDelete = () => {
     if (onDelete) {
       onDelete(project.id); // Call the delete function passed as a prop
@@ -29,18 +29,13 @@ const ProjectCard = ({ project, onFavouriteToggle, onToDoClick, onDelete }) => {
       <h3>{project.title}</h3>
       <p>{project.description}</p>
 
-      {/* Favourites Button */}
       <button onClick={handleFavClick}>
-        {project.isFav ? '❤️ Remove from Favourites' : '🤍 Add to Favourites'}
+        {project.isFav ? '❤️' : '🤍'}
       </button>
-
-      {/* To-Do Button */}
       <button onClick={handleToDoClick}>
-        {project.isToDo ? '✅ In To-Do' : '✅ In To-Do'}
+        {project.isToDo ? '✅ ' : '⬜Do?'}
       </button>
-
-      {/* Delete Button */}
-      <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleDelete}>❌</button>
     </div>
   );
 };
