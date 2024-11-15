@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; // Import React and useState
 import NavBar from './components/NavBar';
 import ProjectCard from './components/ProjectCard';
-import SearchForm from './components/SearchForm.';
+import ToDoList from './components/ToDoList';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       </header>
 
       {/* Search Form */}
-      <SearchForm/>
+      
 
       {/* Intro Section */}
       <section className="intro-section">
@@ -26,6 +26,10 @@ function App() {
       {/* Featured Projects Section */}
       <h2 id='F1'>Featured Projects </h2>
       <ProjectCard/>
+
+      {/*To Do List*/}
+      <h2>To Do List</h2>
+      <ToDoList/>
 
       {/* Footer Section */}
       <footer className="app-footer">
