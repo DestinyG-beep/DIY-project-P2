@@ -1,11 +1,8 @@
 import React from "react";
 
-const ToDoList = ({ toDoProjects }) => {
-  // Make sure the prop is always an array
-  if (!Array.isArray(toDoProjects)) {
-    return <p>Loading your To-Do list...</p>; // Or some fallback message
-  }
+const ToDoList = () => {
   
+
   return (
   <section className="to-do-list-section">
     <h2>Your To-Do Projects</h2>
