@@ -39,7 +39,13 @@ function FeaturedProjects() {
     // Update the state and save to localStorage
     setProjects(updatedProjects);
     setFilteredProjects(updatedProjects);  // Update filtered projects
-    localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
+
+    // Save updated projects to localStorage for future use
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));
+    
+    // Update favourites in localStorage as well
+    const favourites = updatedProjects.filter((project) => project.isFav);
+    localStorage.setItem("favouriteProjects", JSON.stringify(favourites));
   };
 
   // Toggle to-do status
@@ -51,7 +57,13 @@ function FeaturedProjects() {
     // Update the state and save to localStorage
     setProjects(updatedProjects);
     setFilteredProjects(updatedProjects);  // Update filtered projects
-    localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
+
+    // Save updated projects to localStorage for future use
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));
+
+    // Update toDo list in localStorage
+    const toDoList = updatedProjects.filter((project) => project.isToDo);
+    localStorage.setItem("toDoProjects", JSON.stringify(toDoList));
   };
 
   // Delete project
@@ -59,7 +71,9 @@ function FeaturedProjects() {
     const updatedProjects = projects.filter(project => project.id !== id);
     setProjects(updatedProjects);
     setFilteredProjects(updatedProjects);  // Update filtered projects
-    localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
+
+    // Save updated projects to localStorage for future use
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));
   };
 
   return (

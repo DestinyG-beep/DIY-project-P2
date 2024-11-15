@@ -1,40 +1,28 @@
 import React, { useState, useEffect } from "react";
 
 const ToDoList = () => {
-  const [toDoProjects, setToDoProjects] = useState([]); 
+  const [toDoProjects, setToDoProjects] = useState([]);
 
+  // Fetch to-do projects from localStorage or initialize with an empty array
   useEffect(() => {
-    try {
-      const storedProjects = JSON.parse(localStorage.getItem("toDoProjects")) || [];
-      setToDoProjects(storedProjects);
-    } catch (error) {
-      console.error("Error parsing toDoProjects from localStorage", error);
-      setToDoProjects([]); 
-    }
+    const storedToDoProjects = JSON.parse(localStorage.getItem("toDoProjects")) || [];
+    setToDoProjects(storedToDoProjects);
   }, []);
 
   return (
     <div>
       <h2>Your To-Do List</h2>
       <div className="project-cards">
-        {Array.isArray(toDoProjects) ? (
-          toDoProjects.length === 0 ? (
-            <div>
-              <p>No to-do projects yet.</p>
-              <button onClick={() => window.location.href = "/projects"}>
-                Add a Project
-              </button>
-            </div>
-          ) : (
-            toDoProjects.map((project) => (
-              <div key={project.id} className="project-card">
-                <h4>{project.title}</h4>
-                <p>{project.description}</p>                
-              </div>
-            ))
-          )
+        {toDoProjects.length === 0 ? (
+          <p>No to-do projects yet.</p>
         ) : (
-          <p>Error: Unable to load your to-do projects. Please try again later.</p>
+          toDoProjects.map((project) => (
+            <div key={project.id} className="project-card">
+              <img src={project.image} alt={project.title} />
+              <h4>{project.title}</h4>
+              <p>{project.description}</p>
+            </div>
+          ))
         )}
       </div>
     </div>
