@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ProjectCard = ({ project, onFavouriteToggle, onToDoClick, onDelete }) => {
-  
   // Handle favourite toggle
   const handleFavClick = () => {
     if (onFavouriteToggle) {
@@ -16,7 +15,7 @@ const ProjectCard = ({ project, onFavouriteToggle, onToDoClick, onDelete }) => {
     }
   };
 
-  
+  // Handle project deletion
   const handleDelete = () => {
     if (onDelete) {
       onDelete(project.id); // Call the delete function passed as a prop

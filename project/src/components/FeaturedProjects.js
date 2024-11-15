@@ -30,61 +30,61 @@ function FeaturedProjects() {
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
 
-
+  // Toggle favourite status
   const toggleFavourite = (id) => {
-    setProjects(prevProjects =>
-      prevProjects.map(project =>
-        project.id === id ? { ...project, isFav: !project.isFav } : project
-      )
+    const updatedProjects = projects.map((project) =>
+      project.id === id ? { ...project, isFav: !project.isFav } : project
     );
+
+    // Update the state and save to localStorage
+    setProjects(updatedProjects);
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
   };
 
-  // Handle adding to To-Do list
+  // Toggle to-do status
   const toggleToDo = (id) => {
-    setProjects(prevProjects =>
-      prevProjects.map(project =>
-        project.id === id ? { ...project, isToDo: !project.isToDo } : project
-      )
+    const updatedProjects = projects.map((project) =>
+      project.id === id ? { ...project, isToDo: !project.isToDo } : project
     );
+
+    // Update the state and save to localStorage
+    setProjects(updatedProjects);
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
   };
 
-   // Handle project deletion
+  // Delete project
   const handleDelete = (id) => {
-    setProjects(prevProjects => prevProjects.filter(project => project.id !== id));
-    setFilteredProjects(prevProjects => prevProjects.filter(project => project.id !== id)); // Update filtered projects if deleted
+    const updatedProjects = projects.filter(project => project.id !== id);
+    setProjects(updatedProjects);
+    localStorage.setItem("projects", JSON.stringify(updatedProjects));  // Save updated projects to localStorage
   };
-
 
   return (
     <div>
       <h2>Featured Projects</h2>
       <SearchForm projects={projects} onSearch={handleSearch} />
       <div className="project-cards">
-        {filteredProjects.length === 0 ? (
-          <p>No projects match your search.</p>
-        ) : (
-          filteredProjects.map((project) => (
-            <ProjectCard 
-              key={project.id} 
-              project={project}
-              onFavouriteToggle={toggleFavourite}
-              onToDoClick={toggleToDo}
-              onDelete={handleDelete}
-            />
-          ))
-        )}
+        {currentProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onFavouriteToggle={toggleFavourite}
+            onToDoClick={toggleToDo}
+            onDelete={handleDelete}
+          />
+        ))}
       </div>
 
-       {/* Pagination Controls */}
-       <div className="pagination">
+      {/* Pagination Controls */}
+      <div className="pagination">
         <button
-          onClick={() => paginate(currentPage - 1)}
+          onClick={() => setCurrentPage(currentPage - 1)}
           disabled={currentPage === 1}
         >
           Previous
         </button>
         <button
-          onClick={() => paginate(currentPage + 1)}
+          onClick={() => setCurrentPage(currentPage + 1)}
           disabled={currentPage * projectsPerPage >= filteredProjects.length}
         >
           Next
