@@ -74,20 +74,22 @@ function App() {
         {/* Featured Projects Section */}
         <h2 id="F1">Featured Projects</h2>
         <div className="project-cards">
-          {filteredProjects.map(project => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onFavouriteToggle={handleFavouriteToggle}
-              onToDoClick={handleToDoClick}
-            />
-          ))}
+          {filteredProjects.length === 0 ? (
+            <p>No projects match your search.</p>
+          ) : (
+            filteredProjects.map(project => (
+              <ProjectCard
+                key={project.id}
+                project={project}
+                onFavouriteToggle={handleFavouriteToggle}
+                onToDoClick={handleToDoClick}
+              />
+            ))
+          )}
         </div>
 
         {/* To Do List Section */}
-        <h2>To Do List</h2>
-        <ToDoList toDoProjects={toDoList}/>
-        
+        <ToDoList toDoProjects={toDoList} />
 
         {/* Favourites Section */}
         <Favourites favouriteProjects={favouriteProjects} />
