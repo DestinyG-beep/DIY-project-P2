@@ -6,6 +6,7 @@ const SearchForm = () => {
   const [projects, setProjects] = useState([]); // All projects
   const [filteredProjects, setFilteredProjects] = useState([]); // Filtered projects
   const [loading, setLoading] = useState(true);
+  const [toDoList, setToDoList] = useState([]); // To-Do list state
 
   // Fetch projects from db.json on component mount
   useEffect(() => {
