@@ -32,6 +32,7 @@ body {
   height: 100vh;
   margin: 0;
   font-size: medium;
+  font-weight: bolder;
   color: hsl(#c5c9c6);
 }
 
