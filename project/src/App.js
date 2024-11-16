@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="app-header">
-          <h1 id="h1">Do It Yourself Projects©</h1>
+          <h1 id="h1">HOME DIY©</h1>
           <NavBar /> 
         </header>
         
