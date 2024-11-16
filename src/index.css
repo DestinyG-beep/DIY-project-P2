@@ -5,6 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative; 
+}
+
+body::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://res.cloudinary.com/dyrayvgch/image/upload/v1731749973/keith-misner-h0Vxgz5tyXA-unsplash_elve2r.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4; 
+  z-index: -1; 
 }
 
 code {
@@ -13,10 +29,6 @@ code {
 }
 
 body {
-  background-image: url('https://res.cloudinary.com/dyrayvgch/image/upload/v1731749973/keith-misner-h0Vxgz5tyXA-unsplash_elve2r.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
 }
@@ -46,16 +58,15 @@ body {
 }
 
 .navbar .links {
-margin-right: auto;
-text-align: center;
-font-size: 25px;
-
+  margin-right: auto;
+  text-align: center;
+  font-size: 25px;
 }
 
 .navbar a {
   margin-right: 12px;
   text-decoration: none;
-  padding: 6px;  
+  padding: 6px;
   color: #868689;
 }
 
@@ -102,7 +113,7 @@ font-size: 25px;
 }
 
 .project-card {
-  align-items : center;
+  align-items: center;
   background-color: white;
   padding: 15px;
   border-radius: 10px;
