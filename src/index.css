@@ -12,6 +12,15 @@ code {
     monospace;
 }
 
+body {
+  background-image: url('public/keith-misner-h0Vxgz5tyXA-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
 /* App.css */
 .App {
   font-family: 'Arial', sans-serif;
