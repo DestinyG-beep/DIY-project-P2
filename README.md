@@ -1,9 +1,38 @@
+HOME DIY App
+A React-based web application to explore various DIY craft projects, add them to your favorites, and create a to-do list. The app is powered by a JSON server backend and supports client-side routing.
+
+
 Features
-Home page displaying a list of blog posts
-Individual post view
-About page
-Contact page with a form
-Simple and clean UI design
+1. Home Page
+Browse DIY Projects: The home page serves as an entry point where users can browse various craft projects.
+Introduction/Overview: Brief description or welcome message about what the app offers and how users can get started with exploring DIY projects.
+2. Projects Page
+View Detailed Project Information: Users can see a list of all available projects with details such as:
+Project Name
+
+Add to Favorites: Users can click the ❤️ (heart) icon to mark a project as a favorite. The project will be saved to their Favorites page for easy access later.
+3. Favorites Page
+View Favorite Projects: Users can view all projects that they have marked as favorites from the Projects Page.
+These are projects the user has expressed an interest in and wants to save for later reference.
+4. To-Do List Page
+Manage To-Do List: Users can add projects to a to-do list for future planning. This can help users organize projects they want to work on later.
+
+5. User Interaction
+Interactive Links: Navigation links like Home, Projects, To-Do List, and Favorites make it easy for users to move between different sections of the app.
+6. Responsive Design
+The app should be mobile-friendly. It will automatically adjust its layout to work well on both desktop and mobile devices.
+7. Search and Filter (Optional)
+Depending on your project setup, users could search for specific projects based on:
+Material Type (e.g., Paper, Wood, Fabric)
+8. Integration with Backend
+Live Data Fetching: The projects displayed on the site are fetched from the backend (JSON Server or Render API). This means users can see the most up-to-date content without needing to refresh the page.
+9. User-Friendly Navigation
+The NavBar allows users to easily navigate between different pages like:
+Home
+Projects
+Favorites
+To-Do List
+
 How to Use
 Requirements
 A computer, tablet, or phone
@@ -11,14 +40,11 @@ Access to the internet
 A modern web browser
 View Live Site
 Visit the deployed application at: https://homediy.netlify.app/ 
+You will also need to deploy the backend at : https://phase-2-backend-4.onrender.com
 
 The live site allows you to:
 
-Browse through the list of blog posts on the home page
-Click on any post to read its full content
-Navigate to the About page to learn more about the blog
-Use the Contact page to reach out via the contact form
-Local Development
+The live site of your HomeDIY Web App should allow users to explore and interact with various DIY craft projects. Here's an overview of the expected features and functionality that someone should be able to do on the live site:
 If you want to run the project locally, you'll need:
 
 Node.js installed on your computer
