@@ -147,7 +147,12 @@ body {
   color: #7f8c8d;
 }
 
-
+.app-footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #34495e;
+  color: white;
+}
 
 .start-button {
   padding: 10px 20px;
