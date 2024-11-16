@@ -10,7 +10,7 @@ function FeaturedProjects() {
 
   
   useEffect(() => {
-    fetch("https://phase-2-backend-4.onrender.com")
+    fetch("https://phase-2-backend-4.onrender.com/projects")
       .then((response) => response.json())
       .then((data) => {
         setProjects(data);
