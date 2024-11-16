@@ -32,7 +32,7 @@ body {
   height: 100vh;
   margin: 0;
   font-size: medium;
-  color: rgb(255, 255, 255);
+  color: hsl(#c5c9c6);
 }
 
 /* App.css */
