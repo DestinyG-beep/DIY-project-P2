@@ -12,10 +12,9 @@ function App() {
     <Router>
       <div className="App">
         <header className="app-header">
-          <h1 id="h1">Do It Yourself Projects</h1>
+          <h1 id="h1">Do It Yourself Projects©</h1>
           <NavBar /> 
         </header>
-
         
         <main>
           <Routes>
@@ -26,10 +25,9 @@ function App() {
             <Route path="*" element={<NotFound />} /> 
           </Routes>
         </main>
-
         
         <footer className="app-footer">
-          <p>
+          <p className="P1">
             Warning !! The content and instructions on this app were compiled
             only to simulate practicality. Should an accident occur from
             following these instructions, the author will not be held

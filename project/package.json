@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "project-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,11 +13,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently 'react-scripts start' 'npm run server'",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -36,9 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "concurrently": "^7.0.0",
-    "json-server": "^0.17.4"
   }
 }
