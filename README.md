@@ -1,4 +1,5 @@
-HOME DIY App
+HOME DIY APP
+
 A React-based web application to explore various DIY craft projects, add them to your favorites, and create a to-do list. The app is powered by a JSON server backend and supports client-side routing.
 
 
@@ -61,7 +62,7 @@ or by downloading a ZIP file of the code.
 
 Navigate to the project directory:
 
-cd react-blog
+cd DIY-project-P2
 Install the required dependencies:
 
 npm install
