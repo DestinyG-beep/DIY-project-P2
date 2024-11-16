@@ -11,9 +11,11 @@ View Detailed Project Information: Users can see a list of all available project
 Project Name
 
 Add to Favorites: Users can click the ❤️ (heart) icon to mark a project as a favorite. The project will be saved to their Favorites page for easy access later.
+
 3. Favorites Page
 View Favorite Projects: Users can view all projects that they have marked as favorites from the Projects Page.
 These are projects the user has expressed an interest in and wants to save for later reference.
+
 4. To-Do List Page
 Manage To-Do List: Users can add projects to a to-do list for future planning. This can help users organize projects they want to work on later.
 
