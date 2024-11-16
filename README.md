@@ -10,7 +10,7 @@ Introduction/Overview: Brief description or welcome message about what the app o
 View Detailed Project Information: Users can see a list of all available projects with details such as:
 Project Name
 
-Add to Favorites: Users can click the ❤️ (heart) icon to mark a project as a favorite. The project will be saved to their Favorites page for easy access later.
+    Add to Favorites: Users can click the ❤️ (heart) icon to mark a project as a favorite. The project will be saved to their Favorites page for easy access later.
 
 3. Favorites Page
 View Favorite Projects: Users can view all projects that they have marked as favorites from the Projects Page.
