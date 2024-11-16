@@ -31,6 +31,8 @@ code {
 body {
   height: 100vh;
   margin: 0;
+  font-size: medium;
+  color: rgb(255, 255, 255);
 }
 
 /* App.css */
