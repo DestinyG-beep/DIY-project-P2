@@ -69,7 +69,7 @@ function FeaturedProjects() {
 
   return (
     <div>
-      <h2>Featured Projects</h2>
+      <h2 className="h2">Featured Projects</h2>
       <SearchForm projects={projects} onSearch={handleSearch} />
       <div className="project-cards">
         {currentProjects.map((project) => (

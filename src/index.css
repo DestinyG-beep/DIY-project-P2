@@ -85,6 +85,13 @@ body {
   text-align: center;
 }
 
+.h2 {
+  font-size: 30px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+
 .tagline {
   font-size: 18px;
   font-weight: 300;

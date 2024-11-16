@@ -26,7 +26,7 @@ const SearchForm = ({ projects, onSearch }) => {
 
   return (
     <div className="search-form">
-      <h2>Search DIY Projects</h2>
+      <h3>Search </h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
