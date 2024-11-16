@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+Craft Project Web App
+A React-based web application to explore various DIY craft projects, add them to your favorites, and create a to-do list. The app is powered by a JSON server backend and supports client-side routing.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+## Home Page: Browse a variety of DIY craft projects.
+## Projects Page: View all projects with detailed descriptions, materials, and difficulty levels.
+## Favorites: Mark projects as your favorites and view them in the "Favorites" section.
+## rks seamlessly on desktop and mobile devices.
+Technologies Used
+Frontend
+React: A JavaScript library for building user interfaces.
+React Router: For managing client-side routing.
+CSS: Styling for the application.
+Backend
+JSON Server: A lightweight API for managing project data.
+Setup and Installation
+Frontend
+Clone the repository:
 
-## Available Scripts
+bash
+Copy code
+git clone <frontend-repo-url>
+cd <frontend-folder>
+Install dependencies:
 
-In the project directory, you can run:
+bash
+Copy code
+npm install
+Run the app locally:
 
-### `npm start`
+bash
+Copy code
+npm start
+Access the app at http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Backend
+Clone the backend repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+git clone <backend-repo-url>
+cd <backend-folder>
+Install dependencies:
 
-### `npm test`
+bash
+Copy code
+npm install
+Run the JSON Server:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+bash
+Copy code
+npm start
+The backend will be available at http://localhost:5000.
 
-### `npm run build`
+Deployment
+Frontend Deployment with Netlify
+Build the app:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy code
+npm run build
+Deploy:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Login to Netlify.
+Link your repository or manually upload the build/ folder.
+Configure the build command as npm run build and publish directory as build/.
+Add Redirects for Client-Side Routing: Ensure you include a _redirects file in the public/ folder with the following content:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+bash
+Copy code
+/*    /index.html   200
+Your app will be live at <netlify-url>.
 
-### `npm run eject`
+Backend Deployment with Render
+Deploy:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Push your backend code to a GitHub repository.
+Go to Render and create a new Web Service.
+Link the GitHub repository and configure:
+Build Command: npm install
+Start Command: npm start
+Environment Variables: Leave them empty unless specified otherwise.
+Backend URL:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Render will provide a backend URL (e.g., https://project-backend.onrender.com).
+Use this URL in your React app's environment variables:
+Name: REACT_APP_API_URL
+Value: https://project-backend.onrender.com.
+Environment Variables
+Add the following environment variables to your frontend deployment platform (e.g., Netlify):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+REACT_APP_API_URL: The backend API URL (e.g., https://project-backend.onrender.com).
+Folder Structure
+Frontend
+java
+Copy code
+project-frontend/
+├── public/
+│   ├── index.html
+│   ├── _redirects
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   ├── index.js
+├── package.json
+Backend
+go
+Copy code
+project-backend/
+├── db.json
+├── package.json
+How to Use
+Home Page:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Browse all available craft projects.
+Projects Page:
 
-## Learn More
+See project details like materials, difficulty, and description.
+Favorites:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mark projects as your favorite and view them here.
+To-Do List:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Add projects to your to-do list for future planning.
+Contributing
+Fork the repository.
+Create a feature branch:
+bash
+Copy code
+git checkout -b feature-name
+Commit your changes:
+bash
+Copy code
+git commit -m "Add new feature"
+Push to the branch:
+bash
+Copy code
+git push origin feature-name
+Create a pull request.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
